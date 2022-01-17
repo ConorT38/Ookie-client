@@ -1,6 +1,12 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import React, { useState } from "react";
-import { Card, Button, Form } from "react-bootstrap";
+import {
+  Card,
+  Button,
+  Form,
+  InputGroup,
+  FormControl,
+} from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import { useNavigate } from "react-router";
 
@@ -9,11 +15,12 @@ const HomeRoute = () => {
   const navigate = useNavigate();
 
   const search = (e) => {
+    const query = encodeURIComponent(searchTerm);
     e.preventDefault();
     if (searchTerm.length > 0) {
       navigate({
         pathname: "/search",
-        search: `?s=${encodeURIComponent(searchTerm)}`,
+        search: `?q=${query}`,
       });
     }
   };
@@ -30,11 +37,17 @@ const HomeRoute = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           >
             <Form.Group className="mb-3">
-              <Form.Control placeholder="Search" />
+              <InputGroup className="mb-3">
+                <FormControl placeholder="Search" aria-label="Search" />
+                <Button
+                  type="submit"
+                  variant="outline-primary"
+                  id="button-addon2"
+                >
+                  Search
+                </Button>
+              </InputGroup>
             </Form.Group>
-            <Button type="submit" variant="primary">
-              Search
-            </Button>
           </Form>
         </Card.Body>
       </Card>
