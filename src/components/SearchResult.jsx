@@ -7,9 +7,9 @@ function SearchResult(props) {
     <>
       <Card>
         <Card.Body>
-          <a href={searchResult.status}>{searchResult.name}</a>
+          <a href={searchResult.url}>{searchResult.title}</a>
           <br />
-          <small colour="grey">{searchResult.gender}</small>
+          <small colour="grey">{searchResult.url}</small>
         </Card.Body>
       </Card>
       <br />
