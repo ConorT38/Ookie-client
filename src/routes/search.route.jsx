@@ -24,7 +24,7 @@ const SearchRoute = () => {
   const navigate = useNavigate();
 
   const [searchResults, loading] = useSearchApi(
-    "http://localhost:8080/search/" + searchQuery
+    "http://192.168.0.136:8080/search/" + searchQuery
   );
 
   const search = (e) => {
