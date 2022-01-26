@@ -38,7 +38,7 @@ const HomeRoute = () => {
           >
             <Form.Group className="mb-3">
               <InputGroup className="mb-3">
-                <FormControl placeholder="Search" aria-label="Search" />
+                <FormControl autoComplete="off" placeholder="Search" aria-label="Search" />
                 <Button
                   type="submit"
                   variant="outline-primary"

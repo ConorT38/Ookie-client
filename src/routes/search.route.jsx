@@ -1,12 +1,11 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState } from "react";
+import React from "react";
 import {
   Form,
   Row,
   Col,
   Card,
   Button,
-  Nav,
   InputGroup,
   FormControl,
 } from "react-bootstrap";
@@ -54,7 +53,8 @@ const SearchRoute = () => {
                         name="q"
                         placeholder="Search"
                         aria-label="Search"
-                        
+                        autoComplete="off"
+                        defaultValue={searchQuery}
                       />
                       <Button
                         type="submit"
