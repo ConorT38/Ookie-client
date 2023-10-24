@@ -5,9 +5,9 @@ function useSearchApi(url) {
   const [searchResults, setSearchResult] = useState();
   const [loading, setLoading] = useState(false);
 
-  useEffect(async () => {
+  useEffect(() => {
     setLoading(true);
-    await axios.get(url).then((r) => {
+    axios.get(url).then((r) => {
       setSearchResult(r.data);
       setLoading(false);
     });
