@@ -30,7 +30,7 @@ const HomeRoute = () => {
       <Card className="text-center">
         <Card.Header>Welcome to Ookie!</Card.Header>
         <Card.Body>
-          <Card.Title>Search anything on the internet.</Card.Title>
+          <Card.Title>Search for anything on the internet.</Card.Title>
           <Form
             name="s"
             onSubmit={search}
