@@ -33,7 +33,7 @@ const HomeRoute = () => {
           <Card.Title>Search for anything on the internet.</Card.Title>
           <Form
             name="s"
-            onSubmit={search}
+            onSubmit={() => search}
             onChange={(e) => setSearchTerm(e.target.value)}
           >
             <Form.Group className="mb-3">
